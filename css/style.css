@@ -27,6 +27,21 @@ img{
 
 
 /*Preloader*/
+.hidden{
+  overflow: hidden;
+
+}
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .lds-ripple {
   display: inline-block;
   position: relative;
@@ -222,11 +237,13 @@ img{
     }
 
     .servicios{
+      margin-left: 20px;
       display: flex;
       color: #fff;
       justify-content: space-between;
       margin: auto;
       flex-wrap: wrap;
+      padding: 10px;
     }
 
     .caja-servicios>h4{
@@ -299,7 +316,9 @@ img{
     /*Footer*/
 
     .footer{
+      width: 100%;
       background: url(../img/fondoNat.jpg);
+  
     }
 
     .marca-logo{
@@ -314,7 +333,8 @@ img{
 
     .iconos{
       display: flex;
-      margin: auto;
+      margin: auto; 
+      margin-top: 90px;
       justify-content: space-around;
       width: 100%;
     }
@@ -361,4 +381,43 @@ img{
         color: #fff;
       }
 
+      .textos>h1{font-size: 70px;}
+      .textos>h2{font-size: 35px;}
+
+      .content-card{
+        width: 48%;
+        margin-bottom: var(--margenes);
+      }
+
+      :root{
+        --margenes: 30px;
+      }
+    }
+
+    @media screen and (max-width: 500px){
+      :root{
+        --espacios-contenido: 25px;
+
+      }
+
+      .content-card{
+        width: 90%;
+      }
+      .caja-servicios{
+        width: 100%;
+        margin-bottom: var(--margenes);
+      }
+
+      .galeria-work .cont-work{
+        width: 85%;
+      }
+
+      .marca-logo{
+        width: 60%;
+      }
+
+      .iconos{
+       margin: auto;
+       margin-top: 90px;
+      }
     }
